@@ -1,26 +1,19 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Import font Pacifico dari Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); */
+
+.embla__container {
+  display: flex;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.embla__slide {
+  min-width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Hilangkan overlay error/warning Next.js */
+#__next-build-watcher,
+.nextjs-toast-container,
+#__next_error__ {
+  display: none !important;
 }
